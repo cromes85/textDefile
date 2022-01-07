@@ -39,11 +39,9 @@
   animation-duration: 30s;
 }
 
-.msgtxt{
-  font-size: 40px;
-}
 
-.actu_titre {
+
+.actu_titre,#fileDisplayArea {
   display: inline-block;
   margin-top: 50px;
   font-size: 180px;

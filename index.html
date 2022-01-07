@@ -9,13 +9,20 @@
 
 <div class="position bandeau">
     <div class="actu">
-        <div class="actu_titre"> Texte en HTML et CSS ? 
-            <embed src="texte.txt">
+        <div class="actu_titre"> Texte en HTML  
+            <p id="fileDisplayArea"><p>
         </div>
-        <!-- <object width="500" height="500" data="texte.txt"> -->
-        <!-- <object class="msgtxt" data="texte.txt"> -->
-        <!-- <embed src="texte.txt"> -->
+             
     </div>
 </div>
+<script>
+    const logFileText = async file => {
+    const response = await fetch(file)
+    const text = await response.text()
+    // console.log(text)
+    document.getElementById("fileDisplayArea").innerHTML = text;
+    }
+    logFileText('texte.txt')
+    </script>
 </body>
 </html>
