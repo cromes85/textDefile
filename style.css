@@ -1,75 +1,46 @@
-.position {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.logo {
-  height: 50px;
-  width: 150px;
-  line-height: 50px;
-  font-size: 25px;
-  color: white;
-  background-color: red;
-  text-align: center;
-}
-
-.bandeau {
-  width: 100%;
-  overflow: hidden;
-  height:215px;
-  background-color: #faffff;
-  padding-left: 100%;
-  margin-left: 0px;
-}
-
-.actu {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  white-space: nowrap;
-  padding-right: 100%;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-name: actu;
-  animation-name: actu;
-  -webkit-animation-duration: 30s;
-  animation-duration: 30s;
-}
-
-
-
-.actu_titre,#fileDisplayArea {
-  display: inline-block;
-  margin-top: 50px;
-  font-size: 180px;
-  color: #091921;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-@-webkit-keyframes actu {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@keyframes actu {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
   
-  100% {
-    -webkit-transform: translate3d(-200%, 0, 0);
-    transform: translate3d(-200%, 0, 0);
+}  
+  body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 100%;
+     min-height: 100vh;
+     font-size: 180px;
+   }
+   .bandeau{
+    width: 100%;
+
+   }
+   .actu_titre {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    overflow: hidden;  
+    
+    height: 50vh;                 
+   }
+   p{
+
+     font-size: 1em;
+   }
+
+   .actu_titre > :first-child {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 2em;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: actu_titre 10s infinite linear;
+  } 
+  @keyframes actu_titre {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
   }
-}
