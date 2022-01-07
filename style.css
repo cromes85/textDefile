@@ -39,6 +39,10 @@
   animation-duration: 30s;
 }
 
+.msgtxt{
+  font-size: 40px;
+}
+
 .actu_titre {
   display: inline-block;
   margin-top: 50px;
