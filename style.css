@@ -38,7 +38,7 @@
     padding-right: 2em;                   /* un peu d'espace pour la transition */
     padding-left: 100%;                   /* placement à droite du conteneur */
     white-space: nowrap;                  /* pas de passage à la ligne */
-    animation: actu_titre 20s infinite linear;
+    animation: actu_titre 25s infinite linear;
   } 
   @keyframes actu_titre {
     0% {
