@@ -28,7 +28,7 @@
    p{
      color: #004996;
      font-size: 1em;
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      
 
    }
@@ -38,9 +38,9 @@
     padding-right: 2em;                   /* un peu d'espace pour la transition */
     padding-left: 100%;                   /* placement à droite du conteneur */
     white-space: nowrap;                  /* pas de passage à la ligne */
-    animation: actu_titre 30s infinite linear;
+    animation: p 32s infinite linear;
   } 
-  @keyframes actu_titre {
+  @keyframes p {
     0% {
       transform: translate3d(0,0,0);      /* position initiale à droite */
     }
